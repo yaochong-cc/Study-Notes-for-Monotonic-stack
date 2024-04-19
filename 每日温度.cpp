@@ -56,7 +56,7 @@ public:
 				st.pop();
 			}
 			if (!st.empty()) {
-				res[st.top()] = st.top() - i;
+				res[i] = st.top() - i;
 			}
 			st.push(i);
 		}
@@ -76,7 +76,7 @@ public:
 				st.pop();
 				res[prevIndex] = i - prevIndex;
 			}
-			st.push(i);
+			st.push(i);//栈中存储数组的索引
 		}
 		return res;
 	}
